@@ -1,6 +1,3 @@
-// For more info, see https://github.com/storybookjs/eslint-plugin-storybook#configuration-flat-config-format
-import storybook from "eslint-plugin-storybook";
-
 import tsParser from "@typescript-eslint/parser";
 import tsPlugin from "@typescript-eslint/eslint-plugin";
 import angularPlugin from "@angular-eslint/eslint-plugin";
@@ -55,4 +52,4 @@ export default [{
   rules: {
     ...angularTemplatePlugin.configs.recommended.rules,
   },
-}, ...storybook.configs["flat/recommended"]];
+}];

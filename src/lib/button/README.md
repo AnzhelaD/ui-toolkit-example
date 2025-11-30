@@ -21,23 +21,23 @@ A reusable, accessible, and fully customizable Angular button component designed
 
 ### Inputs
 
-| Input          | Type                     | Default      | Description                               |
-| -------------- | ------------------------ | ------------ | ----------------------------------------- |
-| `label`        | `string`                 | —            | Button text                               |
-| `variant`      | `'primary' \| 'secondary' \| 'tertiary'` | `'primary'` | Visual style                              |
-| `size`         | `'small' \| 'medium' \| 'large'` | `'medium'` | Button size                               |
-| `disabled`     | `boolean`                | `false`      | Disable the button                        |
-| `loading`      | `boolean`                | `false`      | Show a loading spinner                     |
-| `href`         | `string`                 | —            | Use the button as a link                   |
-| `icon`         | `string \| TemplateRef<any>` | —        | Icon class or Angular template/component  |
-| `iconPosition` | `'left' \| 'right'`      | `'left'`     | Position of the icon                       |
-| `theme`        | `'light' \| 'dark'`      | `'light'`    | Button theme                               |
+| Input          | Type                                     | Default     | Description                              |
+| -------------- | ---------------------------------------- | ----------- | ---------------------------------------- |
+| `label`        | `string`                                 | —           | Button text                              |
+| `variant`      | `'primary' \| 'secondary' \| 'tertiary'` | `'primary'` | Visual style                             |
+| `size`         | `'small' \| 'medium' \| 'large'`         | `'medium'`  | Button size                              |
+| `disabled`     | `boolean`                                | `false`     | Disable the button                       |
+| `loading`      | `boolean`                                | `false`     | Show a loading spinner                   |
+| `href`         | `string`                                 | —           | Use the button as a link                 |
+| `icon`         | `string \| TemplateRef<any>`             | —           | Icon class or Angular template/component |
+| `iconPosition` | `'left' \| 'right'`                      | `'left'`    | Position of the icon                     |
+| `theme`        | `'light' \| 'dark'`                      | `'light'`   | Button theme                             |
 
 ### Outputs
 
-| Output        | Type                       | Description                                 |
-| ------------- | -------------------------- | ------------------------------------------- |
-| `buttonClick` | `MouseEvent \| KeyboardEvent` | Emits on click or Enter/Space key press    |
+| Output        | Type                          | Description                             |
+| ------------- | ----------------------------- | --------------------------------------- |
+| `buttonClick` | `MouseEvent \| KeyboardEvent` | Emits on click or Enter/Space key press |
 
 ---
 

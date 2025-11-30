@@ -1,5 +1,5 @@
 services:
-  my-task-spa:
+  ui-toolkit-example-spa:
     image: ui-toolkit-example-spa:latest
     container_name: ui-toolkit-example-spa
     build:

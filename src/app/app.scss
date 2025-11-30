@@ -1,0 +1,36 @@
+.component-api {
+  font-family: Arial, sans-serif;
+  margin-top: 2rem;
+}
+.component-api h2 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+.component-api h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+.component-api table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+.component-api th,
+.component-api td {
+  border: 1px solid #ccc;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+.component-api th {
+  background-color: #f4f4f4;
+  font-weight: 600;
+}
+.component-api tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+code {
+  background-color: #f0f0f0;
+  padding: 2px 4px;
+  border-radius: 3px;
+}

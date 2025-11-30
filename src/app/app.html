@@ -1,5 +1,129 @@
 <main class="main">
+  <div class="component-api">
+    <h2>UIButton Component API</h2>
+
+    <!-- Inputs Table -->
+    <h3>Inputs</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Type</th>
+          <th>Default</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>label</code></td>
+          <td>string</td>
+          <td>''</td>
+          <td>Text displayed on the button.</td>
+        </tr>
+        <tr>
+          <td><code>variant</code></td>
+          <td>'primary' | 'secondary' | 'tertiary'</td>
+          <td>'primary'</td>
+          <td>Visual style of the button.</td>
+        </tr>
+        <tr>
+          <td><code>size</code></td>
+          <td>'small' | 'medium' | 'large'</td>
+          <td>'medium'</td>
+          <td>Size of the button.</td>
+        </tr>
+        <tr>
+          <td><code>disabled</code></td>
+          <td>boolean</td>
+          <td>false</td>
+          <td>Disables the button.</td>
+        </tr>
+        <tr>
+          <td><code>loading</code></td>
+          <td>boolean</td>
+          <td>false</td>
+          <td>Shows loading spinner.</td>
+        </tr>
+        <tr>
+          <td><code>href</code></td>
+          <td>string</td>
+          <td>—</td>
+          <td>Renders the button as a link.</td>
+        </tr>
+        <tr>
+          <td><code>icon</code></td>
+          <td>string | TemplateRef</td>
+          <td>—</td>
+          <td>Icon displayed on the button.</td>
+        </tr>
+        <tr>
+          <td><code>iconPosition</code></td>
+          <td>'left' | 'right'</td>
+          <td>'left'</td>
+          <td>Position of the icon relative to the label.</td>
+        </tr>
+        <tr>
+          <td><code>theme</code></td>
+          <td>'light' | 'dark'</td>
+          <td>'light'</td>
+          <td>Button theme.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Outputs Table -->
+    <h3>Outputs</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Event</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>buttonClick</code></td>
+          <td>MouseEvent | KeyboardEvent</td>
+          <td>Emitted when the button is clicked or Enter/Space key is pressed.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Methods Table -->
+    <h3>Methods</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Method</th>
+          <th>Parameters</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>onClick</code></td>
+          <td><code>event: MouseEvent | KeyboardEvent</code></td>
+          <td>
+            Handles mouse click. Emits <code>buttonClick</code> if the button is not disabled or
+            loading.
+          </td>
+        </tr>
+        <tr>
+          <td><code>onKeyDown</code></td>
+          <td><code>event: KeyboardEvent</code></td>
+          <td>
+            Handles Enter/Space key press. Emits <code>buttonClick</code> if the button is not
+            disabled or loading.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
   <div class="content">
+    <h1>UI Toolkit — Demo Buttons</h1>
+
     <h2>Light Theme</h2>
 
     <h3>Primary</h3>
@@ -71,7 +195,7 @@
     <ui-button
       label="Primary"
       variant="primary"
-      [theme]="'dark'"
+      theme="dark"
       (buttonClick)="onButtonClick($event)"
     ></ui-button>
 
@@ -79,7 +203,7 @@
     <ui-button
       label="Secondary"
       variant="secondary"
-      [theme]="'dark'"
+      theme="dark"
       (buttonClick)="onButtonClick($event)"
     ></ui-button>
 
@@ -87,7 +211,7 @@
     <ui-button
       label="Tertiary"
       variant="tertiary"
-      [theme]="'dark'"
+      theme="dark"
       (buttonClick)="onButtonClick($event)"
     ></ui-button>
 
@@ -95,7 +219,7 @@
     <ui-button
       label="Save"
       variant="primary"
-      [theme]="'dark'"
+      theme="dark"
       icon="pi pi-check"
       iconPosition="left"
       (buttonClick)="onButtonClick($event)"
@@ -105,7 +229,7 @@
     <ui-button
       label="Next"
       variant="secondary"
-      [theme]="'dark'"
+      theme="dark"
       icon="pi pi-arrow-right"
       iconPosition="right"
       (buttonClick)="onButtonClick($event)"
@@ -115,7 +239,7 @@
     <ui-button
       label="Loading..."
       variant="primary"
-      [theme]="'dark'"
+      theme="dark"
       [loading]="true"
       (buttonClick)="onButtonClick($event)"
     ></ui-button>
@@ -124,7 +248,7 @@
     <ui-button
       label="Disabled"
       variant="tertiary"
-      [theme]="'dark'"
+      theme="dark"
       [disabled]="true"
       (buttonClick)="onButtonClick($event)"
     ></ui-button>
@@ -133,7 +257,7 @@
     <ui-button
       as="link"
       label="Go to Google"
-      [theme]="'dark'"
+      theme="dark"
       href="https://google.com"
       icon="pi pi-external-link"
       iconPosition="right"

@@ -9,6 +9,7 @@ import { UIButtonComponent } from 'ui-toolkit';
 })
 export class App {
   onButtonClick(event: Event) {
-    console.log('Button clicked:', event);
+    console.log('Button clicked', event);
+    alert('Button clicked!');
   }
 }
