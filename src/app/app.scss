@@ -1,6 +1,7 @@
 .component-api {
   font-family: Arial, sans-serif;
   margin-top: 2rem;
+  padding: 1rem;
 }
 .component-api h2 {
   margin-bottom: 1rem;
@@ -33,4 +34,22 @@ code {
   background-color: #f0f0f0;
   padding: 2px 4px;
   border-radius: 3px;
+}
+.dark {
+  background-color: #333;
+  padding: 1rem;
+  h3,
+  h2 {
+    color: white;
+  }
+}
+.main {
+  padding: 0.5rem;
+}
+.content {
+  padding: 1rem;
+}
+.light {
+  background-color: #f4f4f4;
+  padding: 1rem;
 }

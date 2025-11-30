@@ -123,145 +123,166 @@
 
   <div class="content">
     <h1>UI Toolkit — Demo Buttons</h1>
+    <div class="light">
+      <h2>Light Theme</h2>
 
-    <h2>Light Theme</h2>
+      <h3>Primary</h3>
+      <ui-button
+        label="Primary"
+        variant="primary"
+        (buttonClick)="onButtonClick($event)"
+      ></ui-button>
 
-    <h3>Primary</h3>
-    <ui-button label="Primary" variant="primary" (buttonClick)="onButtonClick($event)"></ui-button>
+      <h3>Secondary</h3>
+      <ui-button
+        label="Secondary"
+        variant="secondary"
+        (buttonClick)="onButtonClick($event)"
+      ></ui-button>
 
-    <h3>Secondary</h3>
-    <ui-button
-      label="Secondary"
-      variant="secondary"
-      (buttonClick)="onButtonClick($event)"
-    ></ui-button>
+      <h3>Tertiary</h3>
+      <ui-button
+        label="Tertiary"
+        variant="tertiary"
+        (buttonClick)="onButtonClick($event)"
+      ></ui-button>
 
-    <h3>Tertiary</h3>
-    <ui-button
-      label="Tertiary"
-      variant="tertiary"
-      (buttonClick)="onButtonClick($event)"
-    ></ui-button>
+      <h3>Primary with left icon</h3>
+      <ui-button
+        label="Save"
+        variant="primary"
+        icon="pi pi-check"
+        iconPosition="left"
+        (buttonClick)="onButtonClick($event)"
+      ></ui-button>
 
-    <h3>Primary with left icon</h3>
-    <ui-button
-      label="Save"
-      variant="primary"
-      icon="pi pi-check"
-      iconPosition="left"
-      (buttonClick)="onButtonClick($event)"
-    ></ui-button>
+      <h3>Secondary with right icon</h3>
+      <ui-button
+        label="Next"
+        variant="secondary"
+        icon="pi pi-arrow-right"
+        iconPosition="right"
+        (buttonClick)="onButtonClick($event)"
+      ></ui-button>
 
-    <h3>Secondary with right icon</h3>
-    <ui-button
-      label="Next"
-      variant="secondary"
-      icon="pi pi-arrow-right"
-      iconPosition="right"
-      (buttonClick)="onButtonClick($event)"
-    ></ui-button>
+      <h3>Loading Button</h3>
+      <ui-button
+        label="Loading..."
+        variant="primary"
+        [loading]="true"
+        (buttonClick)="onButtonClick($event)"
+      ></ui-button>
 
-    <h3>Loading Button</h3>
-    <ui-button
-      label="Loading..."
-      variant="primary"
-      [loading]="true"
-      (buttonClick)="onButtonClick($event)"
-    ></ui-button>
+      <h3>Disabled Button</h3>
+      <ui-button
+        label="Disabled"
+        variant="tertiary"
+        [disabled]="true"
+        (buttonClick)="onButtonClick($event)"
+      ></ui-button>
 
-    <h3>Disabled Button</h3>
-    <ui-button
-      label="Disabled"
-      variant="tertiary"
-      [disabled]="true"
-      (buttonClick)="onButtonClick($event)"
-    ></ui-button>
+      <h3>Link as Button</h3>
+      <ui-button
+        as="link"
+        label="Go to Google"
+        href="https://google.com"
+        icon="pi pi-external-link"
+        iconPosition="right"
+        (buttonClick)="onButtonClick($event)"
+      ></ui-button>
 
-    <h3>Link as Button</h3>
-    <ui-button
-      as="link"
-      label="Go to Google"
-      href="https://google.com"
-      icon="pi pi-external-link"
-      iconPosition="right"
-      (buttonClick)="onButtonClick($event)"
-    ></ui-button>
+      <h3>Size Small</h3>
+      <ui-button
+        label="Primary"
+        variant="primary"
+        [size]="'small'"
+        (buttonClick)="onButtonClick($event)"
+      ></ui-button>
 
+      <h3>Size Large</h3>
+      <ui-button
+        label="Primary"
+        variant="primary"
+        [size]="'large'"
+        (buttonClick)="onButtonClick($event)"
+      ></ui-button>
+    </div>
     <hr />
 
-    <h2>Dark Theme</h2>
+    <div class="dark">
+      <h2>Dark Theme</h2>
+      <h3>Primary</h3>
+      <ui-button
+        label="Primary"
+        variant="primary"
+        theme="dark"
+        (buttonClick)="onButtonClick($event)"
+      ></ui-button>
 
-    <h3>Primary</h3>
-    <ui-button
-      label="Primary"
-      variant="primary"
-      theme="dark"
-      (buttonClick)="onButtonClick($event)"
-    ></ui-button>
+      <h3>Secondary</h3>
+      <ui-button
+        label="Secondary"
+        variant="secondary"
+        theme="dark"
+        (buttonClick)="onButtonClick($event)"
+      ></ui-button>
 
-    <h3>Secondary</h3>
-    <ui-button
-      label="Secondary"
-      variant="secondary"
-      theme="dark"
-      (buttonClick)="onButtonClick($event)"
-    ></ui-button>
+      <h3>Tertiary</h3>
+      <ui-button
+        label="Tertiary"
+        variant="tertiary"
+        theme="dark"
+        (buttonClick)="onButtonClick($event)"
+      ></ui-button>
 
-    <h3>Tertiary</h3>
-    <ui-button
-      label="Tertiary"
-      variant="tertiary"
-      theme="dark"
-      (buttonClick)="onButtonClick($event)"
-    ></ui-button>
+      <h3>Primary with left icon</h3>
+      <ui-button
+        label="Save"
+        variant="primary"
+        theme="dark"
+        icon="pi pi-check"
+        iconPosition="left"
+        (buttonClick)="onButtonClick($event)"
+      ></ui-button>
 
-    <h3>Primary with left icon</h3>
-    <ui-button
-      label="Save"
-      variant="primary"
-      theme="dark"
-      icon="pi pi-check"
-      iconPosition="left"
-      (buttonClick)="onButtonClick($event)"
-    ></ui-button>
+      <h3>Secondary with right icon</h3>
+      <ui-button
+        label="Next"
+        variant="secondary"
+        theme="dark"
+        icon="pi pi-arrow-right"
+        iconPosition="right"
+        (buttonClick)="onButtonClick($event)"
+      ></ui-button>
 
-    <h3>Secondary with right icon</h3>
-    <ui-button
-      label="Next"
-      variant="secondary"
-      theme="dark"
-      icon="pi pi-arrow-right"
-      iconPosition="right"
-      (buttonClick)="onButtonClick($event)"
-    ></ui-button>
+      <h3>Loading Button</h3>
+      <ui-button
+        label="Loading..."
+        variant="primary"
+        theme="dark"
+        [loading]="true"
+        (buttonClick)="onButtonClick($event)"
+      ></ui-button>
 
-    <h3>Loading Button</h3>
-    <ui-button
-      label="Loading..."
-      variant="primary"
-      theme="dark"
-      [loading]="true"
-      (buttonClick)="onButtonClick($event)"
-    ></ui-button>
+      <h3>Disabled Button</h3>
+      <ui-button
+        label="Disabled"
+        variant="tertiary"
+        theme="dark"
+        [disabled]="true"
+        (buttonClick)="onButtonClick($event)"
+      ></ui-button>
 
-    <h3>Disabled Button</h3>
-    <ui-button
-      label="Disabled"
-      variant="tertiary"
-      theme="dark"
-      [disabled]="true"
-      (buttonClick)="onButtonClick($event)"
-    ></ui-button>
-
-    <h3>Link as Button</h3>
-    <ui-button
-      as="link"
-      label="Go to Google"
-      theme="dark"
-      href="https://google.com"
-      icon="pi pi-external-link"
-      iconPosition="right"
-      (buttonClick)="onButtonClick($event)"
-    ></ui-button>
+      <h3>Link as Button</h3>
+      <ui-button
+        as="link"
+        label="Go to Google"
+        theme="dark"
+        href="https://google.com"
+        icon="pi pi-external-link"
+        iconPosition="right"
+        (buttonClick)="onButtonClick($event)"
+      ></ui-button>
+    </div>
   </div>
 </main>
