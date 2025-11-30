@@ -166,7 +166,11 @@ Then use it in your Angular template:
 <ui-button label="Disabled" variant="tertiary" theme="dark" [disabled]="true" (buttonClick)="onButtonClick($event)"></ui-button>
 <ui-button as="link" label="Go to Google" theme="dark" href="https://google.com" icon="pi pi-external-link" iconPosition="right" (buttonClick)="onButtonClick($event)"></ui-button>
 ```
+# UI Button Component — Light & Dark Theme Specification
 
+Below is the visual specification for the button component, created according to the defined design tokens and component styles:
+
+![UI Buttons Spec](src/assets/buttons_light_dark_css_exact.png)
 ---
 
 **Note:**  
