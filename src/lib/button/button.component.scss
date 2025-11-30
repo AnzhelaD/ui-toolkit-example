@@ -1,0 +1,138 @@
+:host {
+  display: inline-flex;
+  --btn-radius: 6px;
+
+  --primary-bg: #1976d2;
+  --primary-text: #ffffff;
+
+  --secondary-bg: #e3f2fd;
+  --secondary-border: #1976d2;
+  --secondary-text: #1565c0;
+
+  --tertiary-bg: transparent;
+  --tertiary-border: #1976d2;
+  --tertiary-text: #1565c0;
+
+  --disabled-bg: #e0e0e0;
+  --disabled-text: #9e9e9e;
+
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+:host([data-theme='dark']) {
+  --primary-bg: #0d47a1;
+  --primary-text: #ffffff;
+
+  --secondary-bg: #1565c0;
+  --secondary-border: #90caf9;
+  --secondary-text: #e1f5fe;
+
+  --tertiary-bg: transparent;
+  --tertiary-border: #90caf9;
+  --tertiary-text: #b3e5fc;
+
+  --disabled-bg: #555555;
+  --disabled-text: #999999;
+}
+
+.ui-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--btn-radius);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-weight: 500;
+  gap: 6px;
+  text-decoration: none;
+  user-select: none;
+  outline: none;
+  border: none;
+}
+
+.ui-btn.sm {
+  padding: 6px 12px;
+  font-size: 14px;
+}
+.ui-btn.md {
+  padding: 8px 16px;
+  font-size: 16px;
+}
+.ui-btn.lg {
+  padding: 10px 20px;
+  font-size: 18px;
+}
+
+.ui-btn.primary {
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
+  border: none;
+}
+
+.ui-btn.secondary {
+  background-color: var(--secondary-bg);
+  color: var(--secondary-text);
+  border: 2px solid var(--secondary-border);
+}
+
+.ui-btn.tertiary {
+  background-color: var(--tertiary-bg);
+  color: var(--tertiary-text);
+  border: 2px solid var(--tertiary-border);
+}
+
+.ui-btn:not([disabled]):hover {
+  filter: brightness(1.1);
+}
+
+.ui-btn:not([disabled]):active {
+  transform: scale(0.97);
+}
+
+.ui-btn:disabled,
+.ui-btn[aria-disabled='true'] {
+  background-color: var(--disabled-bg);
+  color: var(--disabled-text);
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.ui-btn:focus-visible {
+  outline: 3px solid #ffca28;
+  outline-offset: 2px;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: currentColor;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ui-btn .icon + .content,
+.ui-btn .content + .icon {
+  margin-left: 4px;
+}
+
+.ui-btn[role='button'][href] {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}

@@ -1,0 +1,34 @@
+services:
+  my-task-spa:
+    image: ui-toolkit-example-spa:latest
+    container_name: ui-toolkit-example-spa
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+
+networks:
+  default:
+    name: ui-toolkit-example-network
+    driver: bridge
+# create network !!!
+# docker network create ui-toolkit-example-network
+
+# Check network, is existing
+# docker network ls
+
+# Run application
+# docker compose up
+
+# Run application in background
+# docker compose up -d
+
+# Check container
+# docker compose ps
+
+# stop container
+# docker compose stop
+
+# stop container and delete it
+# docker compose down

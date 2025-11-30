@@ -1,0 +1,68 @@
+<ng-container *ngIf="isButton; else linkTpl">
+  <button
+    type="button"
+    class="ui-btn"
+    [class.primary]="variant === 'primary'"
+    [class.secondary]="variant === 'secondary'"
+    [class.tertiary]="variant === 'tertiary'"
+    [class.sm]="size === 'small'"
+    [class.md]="size === 'medium'"
+    [class.lg]="size === 'large'"
+    [disabled]="disabled || loading"
+    [attr.aria-disabled]="disabled || loading"
+    [attr.aria-busy]="loading"
+    (click)="onClick($event)"
+    (keydown)="onKeyDown($event)"
+  >
+    <ng-container *ngTemplateOutlet="buttonContent"></ng-container>
+  </button>
+</ng-container>
+
+<ng-template #linkTpl>
+  <a
+    class="ui-btn"
+    role="button"
+    [class.primary]="variant === 'primary'"
+    [class.secondary]="variant === 'secondary'"
+    [class.tertiary]="variant === 'tertiary'"
+    [class.sm]="size === 'small'"
+    [class.md]="size === 'medium'"
+    [class.lg]="size === 'large'"
+    [attr.href]="!disabled && !loading ? href : null"
+    [attr.aria-disabled]="disabled || loading"
+    [attr.aria-busy]="loading"
+    [tabindex]="disabled || loading ? -1 : 0"
+    (click)="onClick($event)"
+    (keydown)="onKeyDown($event)"
+  >
+    <ng-container *ngTemplateOutlet="buttonContent"></ng-container>
+  </a>
+</ng-template>
+
+<ng-template #buttonContent>
+  <ng-container *ngIf="icon && iconPosition === 'left'">
+    <ng-container *ngIf="isTemplate(icon); else iconClass">
+      <ng-container *ngTemplateOutlet="icon"></ng-container>
+    </ng-container>
+    <ng-template #iconClass>
+      <span class="icon"><i [class]="icon" aria-hidden="true"></i></span>
+    </ng-template>
+  </ng-container>
+
+  <ng-container *ngIf="!loading; else loadingTpl">
+    <span class="content">{{ label }}</span>
+  </ng-container>
+
+  <ng-template #loadingTpl>
+    <span class="spinner" aria-live="polite"></span>
+  </ng-template>
+
+  <ng-container *ngIf="icon && iconPosition === 'right'">
+    <ng-container *ngIf="isTemplate(icon); else iconClassRight">
+      <ng-container *ngTemplateOutlet="icon"></ng-container>
+    </ng-container>
+    <ng-template #iconClassRight>
+      <span class="icon"><i [class]="icon" aria-hidden="true"></i></span>
+    </ng-template>
+  </ng-container>
+</ng-template>

@@ -1,12 +1,14 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { UIButtonComponent } from 'ui-toolkit';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [UIButtonComponent, UIButtonComponent],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrl: './app.scss',
 })
 export class App {
-  protected readonly title = signal('ui-toolkit-example');
+  onButtonClick(event: Event) {
+    console.log('Button clicked:', event);
+  }
 }
